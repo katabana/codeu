@@ -3,9 +3,7 @@ bool permutation(string base, string test) {
     if(base.size() != test.size())
         return false; // not permutations for sure
 
-    int letters[256]; //array for ascii chars
-    for(int i = 0; i < 256; i++)
-        letters[i] = 0;
+    vector<int> letters(256, 0); //array for ascii chars
 
     for(int i = 0; i < base.size(); i++) {
         letters[tolower(base[i])]++;
