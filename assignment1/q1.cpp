@@ -8,8 +8,8 @@ bool permutation(string base, string test) {
         letters[i] = 0;
 
     for(int i = 0; i < base.size(); i++) {
-        letters[base[i]]++;
-        letters[test[i]]--;
+        letters[tolower(base[i])]++;
+        letters[tolower(test[i])]--;
     }
 
     for(int i = 0; i < base.size(); i++) {
