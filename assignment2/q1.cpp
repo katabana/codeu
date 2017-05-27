@@ -30,7 +30,7 @@ Node *FindKey(Node *root, int key) {
     return NULL;
 }
 
-void print_ancestors(Node *root, int key) {
+void PrintAncestors(Node *root, int key) {
 
     if(root == NULL) {
         cout << "The tree is empty." << endl;
@@ -55,7 +55,7 @@ void print_ancestors(Node *root, int key) {
 
 int main () {
 
-    //creating the tree
+    //creating the tree for debug and testing
     Node *root = new Node;
     root->parent = NULL;
     root->value = 16;
