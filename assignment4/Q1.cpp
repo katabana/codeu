@@ -4,6 +4,8 @@
 
 using namespace std;
 //iterating two times - first to copy the board
+//not sure of its correctness
+//probably something is missing but I do not know yet
 
 struct Point {
     int x;
@@ -22,9 +24,6 @@ void unionSets(set<int> &sets, int set_to_erase, int set_to_stay) {
     sets.erase(set_to_erase);
     return;
 }
-
-//TODO: wymyslic dzialanie unionSets, teraz niepoprawne (?) może już nie
-
 
 int count_islands(vector <vector<char> > board) {
 
@@ -51,6 +50,8 @@ int count_islands(vector <vector<char> > board) {
     }
 
     //set numbers on board are just for joining
+    //their main point is to add to set sets and know which one to delete
+
     for(int i = 1; i < height + 1; i++){
         for(int j = 1; j < width + 1; j++) {
             if(board_with_guards[i][j].val == 'F')
